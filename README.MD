@@ -20,13 +20,16 @@ From this data:
 Part of 3 data streams.
 
 Responses:
-- 200 - A Json object.</li>
-- 400 - Required data not available.</li>
-- 429 - Rate limit reached.</li>
-- 500 - An Internal error.</li>
+- `200 - A Json object.`
+- `400 - Required data not available.`
+- `429 - Rate limit reached.`
+- `500 - An Internal error.`
 
 The JSON Payload: `application/json`
-
-- "id": number, e.g.- 1
-- "date": datatime, e.g. - "10/27/2004, 02:07:56 AM"
-- "payload": string or null, e.g. - "asdase3234df"
+```json
+{
+  "id": number, e.g.- 1
+  "date": datatime, e.g. - "10/27/2004, 02:07:56 AM"
+  "payload": string or null, e.g. - "asdase3234df"
+ }
+```
