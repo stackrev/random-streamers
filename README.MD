@@ -7,8 +7,9 @@ This server will create radomn streams of data that you can use in challenges or
 These 3 APIs return 3 data streams. Call them and combine their data together in a timely manner.
 
 
-Access it here: [https://flask-tutorial.radmada.repl.co](https://flask-tutorial.radmada.repl.co)
+Access it here: [https://random-streamers.radmada.repl.co](https://random-streamers.radmada.repl.co)
 
+REPLIT workspace publicly available: [https://replit.com/@radmada/random-streamers](https://replit.com/@radmada/random-streamers)
 
 From this data:
 - Clean and standardize data.
