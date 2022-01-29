@@ -1,4 +1,4 @@
-# That Random Streamer!
+# That Random Data Streamer!
 ![chaosgorilla](./streamer.jpg)
 
 This server will create radomn streams of data that you can use in challenges or tests.
@@ -11,7 +11,7 @@ From this data:
 - Find the most common letter.
 - Plot the use of this letter through out time.
 
-## Data Stream APIs.
+## Streaming APIs.
 - GET | /stream1</li>
 - GET | /stream2</li>
 - GET | /stream3</li>
