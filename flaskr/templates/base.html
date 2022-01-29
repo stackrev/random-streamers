@@ -1,0 +1,44 @@
+<!doctype html>
+<title>Technical Test</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<section class="content">
+  <h1>
+    Technical Test
+  </h1>
+
+  <h2>Welcome to your technical interview.</h2>
+
+  <p class="">Prepare you IDE and favorite web stack.</p>
+  <p class="">These 3 APIs return 3 data streams. Call them and combine their data together in a timely manner.</p>
+  <p>From this data:</p>
+
+  <ul>
+    <li>Clean and standardize data.</li>
+    <li>Find the most common letter.</li>
+    <li>Plot the use of this letter through out time.</li>
+  </ul>
+
+  <h2>Data Stream APIs.</h2>
+  <ul>
+    <li>GET | /stream1</li>
+    <li>GET | /stream2</li>
+    <li>GET | /stream3</li>
+  </ul>
+  <h3>[GET]/streamX</h3>
+  <p>Part of 3 data streams.</pa-2>
+  <span>Responses</span>
+  <ul>
+    <li><b>200</b> - A Json object.</li>
+    <li><b>400</b> - Required data not available.</li>
+    <li><b>429</b> - Rate limit reached.</li>
+    <li><b>500</b> - An Internal error.</li>
+  </ul>
+  <span>The JSON Payload: `application/json`</span>
+  <ul>
+    <li><b>"id"</b>: number, e.g.- 1,</li>
+    <li><b>"date"</b>: datatime, e.g. - "10/27/2004, 02:07:56 AM",</li>
+    <li><b>"payload"</b>: string or null, e.g. - "asdase3234df"</li>
+  </ul>
+
+</section>

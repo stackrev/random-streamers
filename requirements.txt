@@ -1,0 +1,4 @@
+versioneer
+Flask
+nose
+eventlet
