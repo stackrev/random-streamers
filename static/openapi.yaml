@@ -1,0 +1,85 @@
+openapi: 3.0.1
+info:
+  title: TechnicalTest
+  description: Technical Test for data streamers.
+  version: 1.0.0
+servers:
+  - url: /
+paths:
+  /stream1:
+    get:
+      summary: Stream with random strings - only letters.
+      operationId: stream1
+      responses:
+        '200':
+          description: Returns json lines.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: number
+                  date:
+                    type: string
+                  payload:
+                    type: string
+        '429':
+          description: Rate limit reached.
+          content: {}
+        '500':
+          description: An Internal error.
+          content: {}
+  /stream2:
+    get:
+      summary: Stream with random strings - alphanumeric.
+      operationId: stream2
+      responses:
+        '200':
+          description: Returns json lines.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: number
+                  date:
+                    type: string
+                  payload:
+                    type: string
+        '429':
+          description: Rate limit reached.
+          content: {}
+        '500':
+          description: An Internal error.
+          content: {}
+  /stream3:
+    get:
+      summary: Stream with random strings - alphanumeric or null.
+      operationId: stream3
+      responses:
+        '200':
+          description: Returns json lines.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - id
+                  - date
+                properties:
+                  id:
+                    type: number
+                  date:
+                    type: string
+                  payload:
+                    type: string
+                    description: This payload can be null.
+        '429':
+          description: Rate limit reached.
+          content: {}
+        '500':
+          description: An Internal error.
+          content: {}
+components: {}

@@ -1,11 +1,11 @@
 from flask import (
     Flask,
     render_template,
-    request,
     Response,
     stream_with_context,
-    jsonify,
+    send_from_directory,
 )
+from flask_cors import CORS
 import os
 import random
 import json
@@ -59,7 +59,12 @@ def generate(include_digits=False, include_nulls=False):
 
 def create_app(config=None):
     template_dir = os.path.relpath("./templates")
-    app = Flask(__name__, instance_relative_config=True, template_folder=template_dir)
+    app = Flask(
+        __name__,
+        instance_relative_config=True,
+        template_folder=template_dir,
+        static_url_path="/static",
+    )
     app.config.from_object(__name__)
     if config is not None:
         app.config.update(config)
@@ -67,6 +72,8 @@ def create_app(config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
+
+    CORS(app)
 
     @app.after_request
     def set_response_headers(response):
@@ -115,4 +122,3 @@ def create_app(config=None):
 if __name__ == "__main__":
     app = create_app()
     app.run(host="0.0.0.0", port=random.randint(2000, 9000))
-
