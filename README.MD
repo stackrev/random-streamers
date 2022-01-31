@@ -1,7 +1,7 @@
 # That Random Data Streamer!
-![chaosgorilla](./streamer.jpg)
+![Streamers!!!](./streamer.jpg)
 
-This server will create radomn streams of data that you can use in challenges or tests.
+This server will create random streams of data that you can use in challenges or tests.
 
 ## What we Have
 These 3 APIs return 3 data streams. Call them and combine their data together in a timely manner.

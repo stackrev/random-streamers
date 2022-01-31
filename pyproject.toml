@@ -4,8 +4,8 @@ requires = ["poetry-core>=1.0.0"]
 
 [tool]
 [tool.poetry]
-authors = ["Your Name <you@example.com>"]
-description = ""
+authors = ["https://github.com/adamd1985"]
+description = "This server will create random streams of data that you can use in challenges or tests."
 name = "python-template"
 version = "0.1.0"
 [tool.poetry.dependencies]

@@ -1,4 +1,0 @@
-versioneer
-Flask
-nose
-eventlet
